@@ -1,18 +1,40 @@
-package labd2;
+public class Point {
 
-public class Point<X,Y> {
-    private X l;
-    private Y r;
-    public Point(X l, Y r){
-        this.l = l;
-        this.r = r;
+    private int x;
+    private int y;
+    private Point next;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
-    public X getX(){ return l; }
-    public Y getY(){ return r; }
-    public void setX(X l){ this.l = l; }
-    public void setY(Y r){ this.r = r; }
-	@Override
-	public String toString() {
-		return "(" + getX() + ", " + getY() + ")";
-	}
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public Point getNext() {
+        return next;
+    }
+
+    public void setNext(Point next) {
+        this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ")";
+    }
 }
